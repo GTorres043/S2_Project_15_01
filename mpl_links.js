@@ -11,3 +11,15 @@
    Filename: mpl_links.js
 
 */
+
+//this block of code allows the content that is selected to load into another webpage.
+window.addEventListener("load", function () {
+
+    var allSelect = document.forms.govLinks;
+    for (var i = 0; i < allSelect.length; i++) {
+        allSelect[i].onchange = function (e) {
+            window.location.href = e.target.value;
+        }
+    }
+
+});
